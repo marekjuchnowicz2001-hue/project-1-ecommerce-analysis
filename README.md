@@ -189,6 +189,9 @@ Some of the main findings from the analysis include:
 
 -Geographic sales analysis
 
+Dashboard Preview
+![Dashboard](04_Assets/dashboard_preview.png)
+
 Author
 
 Marek Juchnowicz
