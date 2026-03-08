@@ -1,193 +1,168 @@
-Olist E-commerce Customer & Revenue Analysis
+Olist E-commerce Customer Analysis
 
 Project Overview
 
-This project analyzes customer behavior and revenue patterns in the Olist e-commerce dataset.
-The goal of the analysis is to understand how customers interact with the platform, evaluate revenue trends, and identify opportunities to improve customer retention.
+This project analyzes customer behavior using the Olist Brazilian E-commerce dataset.
+The goal of the analysis was to explore the dataset, create customer-level metrics, segment customers based on purchasing behavior, and build a business dashboard.
 
-The analysis combines exploratory data analysis (EDA), customer segmentation, and business intelligence visualization using Python and Power BI.
+Data exploration and preparation were performed in Python using Jupyter Notebook.
+The processed datasets were later used to build a Power BI dashboard presenting key customer and revenue metrics.
 
-Dataset
-
-The dataset comes from the public Olist E-commerce Dataset, which contains real-world transactional data from a Brazilian online marketplace.
-
-The dataset includes information about:
-
--customers
-
--orders
-
--order items
-
--payments
-
--reviews
-
--sellers
-
--products
-
--geolocation
-
--The data covers the period from 2016 to 2018.
+---
 
 Project Structure
 
-project-1-ecommerce-analysis 01_data raw processed 
+project-1-ecommerce-analysis/
 
-02_notebooks 01_data_exploration.ipynb 02_customer_segmentation.ipynb 
+01_data/
+└── processed/
+        ├── customer_metrics.csv
+        ├── retention_matrix.csv
+        └── segment_summary.csv
 
-03_dashboard olist_customer_analysis.pbix 
+02_notebooks/
+├── 01_data_exploration.ipynb
+└── 02_customer_segmentation.ipynb
 
-README.md 
+03_dashboard/
+└── olist_customer_analysis.pbix
 
-Description
+04_Assets/
+└── dashboard_preview.png
 
-01_data
+.gitignore
+README.md
 
-Contains both raw and processed datasets.
+---
 
-raw – original datasets from Olist
+Dataset
 
-processed – cleaned and aggregated datasets used for analysis and dashboarding
+This project uses the Olist Brazilian E-commerce public dataset.
 
-02_notebooks
+Dataset source:
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
-Jupyter notebooks used for data analysis:
+Raw data files are not included in this repository.
 
-Exploratory Data Analysis
+After downloading the dataset from Kaggle, place the raw CSV files in:
 
-Customer segmentation and metric creation
+01_data/raw/
 
-03_dashboard
+The repository contains only processed datasets generated during the analysis.
 
-Power BI dashboard visualizing key business insights.
+---
 
-Tools & Technologies
+Tech Stack
 
-The following tools were used in this project:
+Python 3.11
+pandas
+numpy
+matplotlib
+seaborn
+Jupyter Notebook
+Power BI
+Git
+GitHub
+PyCharm
+Anaconda / Conda
 
--Python
+---
 
--Pandas
+Analysis Workflow
 
--NumPy
+1. Download the raw Olist dataset from Kaggle
+2. Load and explore the data in Jupyter Notebook
+3. Perform exploratory data analysis (EDA)
+4. Create customer-level metrics and segmentation
+5. Export processed datasets
+6. Build a Power BI dashboard
 
--Jupyter Notebook
+---
 
--Power BI
+Tools and Workflow
 
--Git
+Anaconda / Conda
 
--GitHub
+- created an isolated Python environment
+- managed project dependencies
 
-Analysis Performed
+PyCharm
 
-Exploratory Data Analysis (EDA)
+- main development environment
+- project and notebook management
 
-Initial exploration of the dataset included:
+Python & Jupyter Notebook
 
--dataset structure inspection
+- data exploration
+- customer metrics creation
+- customer segmentation
+- export of processed datasets
 
--missing value analysis
+Generated datasets:
 
--order and payment exploration
+- customer_metrics.csv
+- segment_summary.csv
+- retention_matrix.csv
 
--customer and order relationship analysis
+Power BI
 
--Customer Metrics
+- creation of the final business dashboard based on processed datasets
 
-Customer-level metrics were calculated to better understand behavior:
+Git / GitHub
 
--total orders per customer
+- version control
+- project hosting
 
--total revenue per customer
+---
 
--average revenue per customer
+How to Run the Project
 
--customer lifetime
+1. Clone the repository
 
--recency (days since last purchase)
+git clone https://github.com/marekjuchnowicz2001-hue/project-1-ecommerce-analysis.git
 
--These metrics were used for segmentation and dashboard analysis.
+2. Download the dataset
 
--Customer Segmentation
+Download the dataset from Kaggle:
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
--Customers were segmented into behavioral groups based on purchasing activity:
+3. Place raw data
 
--One-time Customers – customers who purchased only once
+Place the downloaded CSV files in:
 
--Active Repeat Customers – customers who purchased multiple times
+01_data/raw/
 
--Churn Risk Customers – customers who previously purchased but have not returned recently
+4. Create the Conda environment
 
--This segmentation helps identify opportunities to improve retention strategies.
+conda create -n ecommerce_analysis python=3.11
 
-Power BI Dashboard
+5. Activate the environment
 
-A Power BI dashboard was created to visualize key business metrics.
+conda activate ecommerce_analysis
 
-The dashboard includes:
+6. Install required libraries
 
--Key Performance Indicators (KPIs)
+pip install pandas numpy matplotlib seaborn jupyter
 
--Total Customers
+7. Run the notebooks
 
--Repeat Customers
+Open and run the notebooks located in:
 
--Repeat Customer Percentage
+02_notebooks/
 
--Total Orders
+8. Open the dashboard
 
--Average Revenue per Customer
+Open the Power BI file:
 
--Total Revenue
+03_dashboard/olist_customer_analysis.pbix
 
--Revenue Trend Analysis
+---
 
--A time-series visualization showing monthly revenue growth between 2016 and 2018.
+Dashboard
 
--This analysis reveals a strong growth trend in the platform's revenue.
+The final dashboard was created in Power BI based on the processed datasets generated in Python.
 
--Customer Type Distribution
-
-A pie chart visualizing the share of:
-
--one-time customers
-
--repeat customers
-
--The analysis shows that the majority of customers purchase only once, highlighting a retention opportunity.
-
--Revenue by Customer Segment
-
--A comparison of revenue generated by different customer segments.
-
--Despite the small number of repeat customers, they represent an important opportunity for long-term revenue growth.
-
--Key Insights
-
-Some of the main findings from the analysis include:
-
--Rapid revenue growth from 2016 to 2018.
-
--Very low customer retention, with only about 3% of customers making repeat purchases.
-
--The business relies heavily on new customer acquisition rather than repeat purchasing.
-
--Improving retention strategies could significantly increase long-term revenue.
-
--Future Improvements
-
--Possible next steps for further analysis include:
-
--Cohort analysis
-
--Customer lifetime value (CLV)
-
--Product category performance analysis
-
--Geographic sales analysis
+The dashboard presents key customer and revenue metrics derived from the analysis.
 
 Dashboard Preview
 ![Dashboard](04_Assets/dashboard_preview.png)
